@@ -1,0 +1,15 @@
+def linear_search(arr, n, key):
+    for i in range(n):  # Use range(n) to iterate over indices
+        if arr[i] == key:
+            return i
+    return -1  # Return -1 after checking all elements
+
+arr = [10, 15, 12, 9, 6, 4, 3, 10, 8]
+n = len(arr)
+key = int(input("Enter the key to search for: "))
+index = linear_search(arr, n, key)
+
+if index != -1:
+    print(key, "is present at index", index)
+else:
+    print(key, "is not found")
