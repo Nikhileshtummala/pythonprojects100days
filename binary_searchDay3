@@ -1,0 +1,25 @@
+def binary_search(arr, n, key):
+    s = 0                     # Initializing start index of the array
+    e = n - 1                 # Initializing end index of the array
+
+    while s <= e:             # Performing binary search until start index is less than or equal to end index
+        mid = (s + e) // 2    # Calculating the middle index using integer division
+        
+        if arr[mid] == key:   # If the key is present at the middle index, return the index
+            return mid
+        elif arr[mid] > key:  # If key is smaller, it must be in the left half of the array
+            e = mid - 1       # Adjusting the end index
+        else:                  # If key is larger, it must be in the right half of the array
+            s = mid + 1       # Adjusting the start index
+    
+    return -1                 # Key not found, returning -1
+
+arr = [10, 20, 30, 40, 50, 55, 60, 70, 89, 90]
+n = len(arr)
+key = int(input("Enter the number to search for: "))
+index = binary_search(arr, n, key)
+
+if index != -1:
+    print(key, "is present at index", index)
+else:
+    print(key, "is not found")
