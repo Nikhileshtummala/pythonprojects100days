@@ -1,0 +1,30 @@
+def reverse_array(arr, n):
+    # Initialize start and end pointers
+    s = 0
+    e = n - 1
+    
+    # Loop until the pointers meet
+    while s < e:
+        # Swap elements at start and end indices
+        arr[s], arr[e] = arr[e], arr[s]
+        # Move the start pointer forward
+        s += 1
+        # Move the end pointer backward
+        e -= 1
+
+# Given array
+arr = [10, 20, 30, 40, 50, 55, 60, 70, 89]
+n = len(arr)
+
+# Display original array
+print("Original array:")
+for i in range(n):
+    print(arr[i])
+
+# Reverse the array
+reverse_array(arr, n)
+
+# Display reversed array
+print("\nReversed array:")
+for i in range(n):
+    print(arr[i])
