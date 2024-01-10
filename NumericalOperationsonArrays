@@ -1,0 +1,30 @@
+import numpy as np  # Importing numpy for array and matrix operations
+
+# Creating arrays
+array1 = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+
+array2 = np.array([[9, 8, 7],
+                   [6, 5, 4],
+                   [3, 2, 1]])
+
+# Performing matrix addition
+addition_result = np.add(array1, array2)
+print("Matrix Addition:")
+print(addition_result)
+
+# Performing matrix subtraction
+subtraction_result = np.subtract(array1, array2)
+print("\nMatrix Subtraction:")
+print(subtraction_result)
+
+# Performing matrix multiplication
+multiplication_result = np.matmul(array1, array2)
+print("\nMatrix Multiplication:")
+print(multiplication_result)
+
+# Array manipulation - slicing
+print("\nArray Slicing:")
+sliced_array = array1[0:2, 0:2]  # Slicing a portion of the array
+print(sliced_array)
